@@ -21,10 +21,8 @@ class MainActivity : AppCompatActivity() {
         //binding.btn.setOnClickListener()
         //We are controlling Click events here by making a View Model object in XML file and using onClick() attribute.
 
+        binding.lifecycleOwner = this
         binding.myViewModel = viewModel
 
-        viewModel.counter.observe(this, Observer {
-            binding.textView.text = it.toString()
-        })
     }
 }
